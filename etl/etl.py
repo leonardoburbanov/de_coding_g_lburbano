@@ -10,11 +10,11 @@ import requests
 
 
 # Load environment variables from .env file
-load_dotenv(dotenv_path='../.env')
+load_dotenv(dotenv_path='.env')
 
 # Set up logging
 logging.basicConfig(
-    filename='./etl/logs/etl.log',
+    filename='./logs/etl.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -24,9 +24,9 @@ logging.basicConfig(
 API_ENDPOINT='http://localhost:5000/upload_csv'
 
 # Directories
-input_dir = './etl/input'
-processed_dir = './etl/input/processed'
-errors_dir = './etl/input/errors'
+input_dir = './input'
+processed_dir = './input/processed'
+errors_dir = './input/errors'
 
 # Create directories if they don't exist
 os.makedirs(input_dir, exist_ok=True)
@@ -65,7 +65,6 @@ for file in files:
         if response.status_code == 200:
             # Analize API response stats
             api_stats = response.json()
-            print(api_stats)
             if api_stats['_error_row_count']!=0:
                 # File with errors processed by API, move to errors directory
                 timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
@@ -103,12 +102,3 @@ for file in files:
 # Print execution result
 print(f'Successful files processed: {success_count}')
 print(f'Files with errors: {error_count}')
-
-
-def main():
-        csv_dataframes=extract_etl()
-        load_etl(csv_dataframes)
-        transform_etl()
-
-if __name__ == "__main__":
-    main()

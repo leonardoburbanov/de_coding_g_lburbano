@@ -12,14 +12,13 @@ def get_employee_stats():
         query = file.read()
 
     result = db.session.execute(text(query)).fetchall()
-
     stats = []
     for row in result:
         stats.append({
             'department': row.department,
             'job': row.job,
-            'employee_count': row.employee_count,
-            'quarter': row.quarter
+            'employee_count': int(row.employee_count),
+            'quarter': int(row.quarter)
         })
 
     return jsonify(stats), 200
@@ -37,7 +36,7 @@ def get_department_stats():
         stats.append({
             'department_id': row.department_id,
             'department': row.department,
-            'employee_count': row.employee_count
+            'employee_count': int(row.employee_count)
         })
 
     return jsonify(stats), 200
