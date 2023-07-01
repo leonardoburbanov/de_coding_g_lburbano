@@ -1,0 +1,7 @@
+Flask==2.0.1
+SQLAlchemy==1.4.23
+psycopg2==2.9.1
+python-dotenv==0.19.1
+waitress==2.1.2
+flask_sqlalchemy==3.0.5
+pandas==2.0.3
