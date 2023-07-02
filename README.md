@@ -37,11 +37,9 @@ Challenge
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#test">Test</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -61,7 +59,7 @@ As you can see, I created two main folders: **/app** and **/etl**. **/app** fold
 **/etl** could be launched on demand, using python etl.py inside the folder.
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 
 
@@ -72,7 +70,7 @@ As you can see, I created two main folders: **/app** and **/etl**. **/app** fold
 * Docker 24.0.2
 * Postman v10.15
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 
 
@@ -151,7 +149,7 @@ Recommended tutorial: https://devopscube.com/install-configure-postgresql-amazon
 
 In **app/queries/exploratory** you could find ddl configurations
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 
 
@@ -169,7 +167,7 @@ If the execution results in a successful upload of all the files, the files will
 
 If you change the URL of the API server or you need to run at local, please adjust the **API_ENDPOINT** variable in the **etl/etl.py** file.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 <!-- TEST EXAMPLES -->
 ## Test
@@ -185,7 +183,7 @@ If the execution results in a successful upload of all the files, the files will
 
 If you change the URL of the API server or you need to run at local, please adjust the **API_ENDPOINT** variable in the **etl/etl.py** file.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 
 <!-- LICENSE -->
@@ -193,11 +191,11 @@ If you change the URL of the API server or you need to run at local, please adju
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 Leonardo Burbano - [LinkedIn](https://www.linkedin.com/in/leoburbano/)
 Project Link: [https://github.com/leonardoburbanov/de_coding_g_lburbano](https://github.com/leonardoburbanov/de_coding_g_lburbano)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
