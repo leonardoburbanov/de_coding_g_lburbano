@@ -1,5 +1,4 @@
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/leonardoburbanov/de_coding_g_lburbano">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
@@ -153,7 +152,7 @@ In **app/queries/exploratory** you could find ddl configurations
 
 
 
-<!-- USAGE EXAMPLES -->
+<!-- LAUNCH ETL-->
 ## Usage
 
 Once you located the files in the **etl/input** folder you could run the ETL:
@@ -169,8 +168,8 @@ If you change the URL of the API server or you need to run at local, please adju
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
-<!-- TEST EXAMPLES -->
-## Test
+<!-- TEST API -->
+## Test API
 
 The test over the app with the REST API run automatically on docker file execution:
    ```sh
@@ -187,6 +186,17 @@ To run the test locally, I recommend you deploy the **/app** folder in a virtual
    ```
 
 And you could check the result in the console. And also the logs in **app/logs**.
+
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
+
+<!-- NEXT STEPS -->
+## Next steps
+
+1. To get better control of ETL, we could implement a reprocessing dynamic with the logs and also the rows that won't be inserted.
+
+2. With this dynamic also we could inform errors and execution stats to data producers using automated email or another messaging type.
+
+3. Also, we could send a message to ETL stakeholders to inform the state of the execution and schedule the execution if it's needed.
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
