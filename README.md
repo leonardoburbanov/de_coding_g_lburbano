@@ -158,8 +158,8 @@ In **app/queries/exploratory** you could find ddl configurations
 
 Once you located the files in the **etl/input** folder you could run the ETL:
    ```sh
-    cd app
-    pytest api_test.py
+    cd etl
+    python etl.py
    ```
 
 And you could check the result in the console. And also the logs in **etl/logs**.
