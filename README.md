@@ -5,7 +5,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Globant’s Data Engineering Coding
+<h3 align="center">G Data Engineering Coding
 Challenge
 </h3>
 
