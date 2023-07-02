@@ -1,3 +1,11 @@
+# env dev
+app/dev
+etl/dev
+
+# etl/input
+etl/input/errors
+etl/input/processed
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
