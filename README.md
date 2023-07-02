@@ -107,7 +107,7 @@ You should put the .csv files in the folder **etl/input** maintaining the name c
 
 
 
-### Installation of app.py in AWS Linux virtual machine with Docker (Optional)
+### Installation of app.py in AWS Linux EC2 with Docker (Optional)
 
 1. Install docker
   ```sh
@@ -172,16 +172,21 @@ If you change the URL of the API server or you need to run at local, please adju
 <!-- TEST EXAMPLES -->
 ## Test
 
-The test run automatically on docker file execution:
+The test over the app with the REST API run automatically on docker file execution:
+   ```sh
+    # Run tests
+    RUN pytest api_test.py
+   ```
+
+To run the test locally, I recommend you deploy the **/app** folder in a virtual environment with the installation of **app/requirements.txt**
+
    ```sh
     cd app
+    pip install -r requirements.txt
     pytest api_test.py
    ```
 
-And you could check the result in the console. And also the logs in **etl/logs**.
-If the execution results in a successful upload of all the files, the files will be moved to **etl/input/processed** folder, if they are not successfully uploaded will be located in **etl/input/errors**
-
-If you change the URL of the API server or you need to run at local, please adjust the **API_ENDPOINT** variable in the **etl/etl.py** file.
+And you could check the result in the console. And also the logs in **app/logs**.
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
@@ -189,7 +194,7 @@ If you change the URL of the API server or you need to run at local, please adju
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
