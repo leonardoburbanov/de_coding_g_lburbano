@@ -11,7 +11,16 @@ def upload_csv():
         return jsonify({'message': 'No file provided'}), 400
 
     table_name = request.args.get('table', 'employees')
-    batch_size = request.args.get('batch_size', 100, type=int)
+    batch_size = request.args.get('batch_size', 1000, type=int)
+
+
+    if batch_size > 1000:
+        batch_size = 1000
+    elif batch_size < 1:
+        batch_size = 1
+    else:
+        batch_size = batch_size
+
     data = file.read().decode('utf-8').splitlines()
 
     # Perform batch insertions

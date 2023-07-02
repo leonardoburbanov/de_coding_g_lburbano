@@ -34,19 +34,19 @@ app.register_blueprint(upload_csv_routes)
 app.register_blueprint(query_routes)
 app.register_blueprint(test_routes)
 
-# Error handling for 404 - Page Not Found
-# @app.errorhandler(404)
-# def handle_not_found_error(e):
-#     message = "404 - Page Not Found: " + str(e)
-#     logging.error(message)
-#     return message, 404
+#Error handling for 404 - Page Not Found
+@app.errorhandler(404)
+def handle_not_found_error(e):
+    message = "404 - Page Not Found: " + str(e)
+    logging.error(message)
+    return message, 404
 
-# # Error handling for 500 - Internal Server Error
-# @app.errorhandler(500)
-# def handle_internal_server_error(e):
-#     message = "500 - Internal Server Error: " + str(e)
-#     logging.error(message)
-#     return message, 500
+# Error handling for 500 - Internal Server Error
+@app.errorhandler(500)
+def handle_internal_server_error(e):
+    message = "500 - Internal Server Error: " + str(e)
+    logging.error(message)
+    return message, 500
 
 if __name__ == "__main__":
     serve(app, host='0.0.0.0', port=5000)

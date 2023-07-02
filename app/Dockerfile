@@ -4,6 +4,7 @@ FROM python:3.9-slim
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ENV DATABASE_URI postgresql://globant:xspDFr8b09t0@44.203.177.42:5432/globant
 
 # Set the working directory inside the container
 WORKDIR /app
