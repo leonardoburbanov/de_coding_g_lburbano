@@ -31,5 +31,7 @@ CREATE TABLE hired_employees (
     FOREIGN KEY (job_id) REFERENCES jobs (id)
 );
 
+delete from hired_employees;
+delete from departments;
+delete from jobs;
 
-select 

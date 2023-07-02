@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "d1268541-ccc3-44c6-b973-31ac7af93a1c",
+		"name": "Globant_de",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1606121"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{globant_backend}}/test",
+					"host": [
+						"{{globant_backend}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload_csv+departments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Globant/data_challenge_files/departments.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{globant_backend}}/upload_csv?table=departments&batch_size=10",
+					"host": [
+						"{{globant_backend}}"
+					],
+					"path": [
+						"upload_csv"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "departments"
+						},
+						{
+							"key": "batch_size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload_csv+jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Globant/data_challenge_files/jobs.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{globant_backend}}/upload_csv?table=jobs&batch_size=10",
+					"host": [
+						"{{globant_backend}}"
+					],
+					"path": [
+						"upload_csv"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "jobs"
+						},
+						{
+							"key": "batch_size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload_csv+employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Globant/data_challenge_files/hired_employees.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{globant_backend}}/upload_csv?table=employees&batch_size=10",
+					"host": [
+						"{{globant_backend}}"
+					],
+					"path": [
+						"upload_csv"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "employees"
+						},
+						{
+							"key": "batch_size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee-stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{globant_backend}}/employee-stats",
+					"host": [
+						"{{globant_backend}}"
+					],
+					"path": [
+						"employee-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "department-stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{globant_backend}}/department-stats",
+					"host": [
+						"{{globant_backend}}"
+					],
+					"path": [
+						"department-stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

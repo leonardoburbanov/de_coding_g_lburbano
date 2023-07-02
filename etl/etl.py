@@ -3,14 +3,7 @@ import shutil
 import logging
 from datetime import datetime
 import time
-from dotenv import load_dotenv
 import requests
-
-
-
-
-# Load environment variables from .env file
-load_dotenv(dotenv_path='.env')
 
 # Set up logging
 logging.basicConfig(
@@ -20,8 +13,8 @@ logging.basicConfig(
 )
 
 # API endpoint for CSV upload
-#API_ENDPOINT = os.getenv('API_ENDPOINT')
-API_ENDPOINT='http://localhost:5000/upload_csv'
+#local API_ENDPOINT='http://localhost:5000/upload_csv'
+API_ENDPOINT='http://54.174.85.3:5000/upload_csv'
 
 # Directories
 input_dir = './input'
@@ -65,7 +58,7 @@ for file in files:
         if response.status_code == 200:
             # Analize API response stats
             api_stats = response.json()
-            if api_stats['_error_row_count']!=0:
+            if "_error_row_count" in api_stats and api_stats['_error_row_count']!=0:
                 # File with errors processed by API, move to errors directory
                 timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
                 new_filename = f"{file.split('.')[0]}_{timestamp}.csv"
@@ -85,7 +78,7 @@ for file in files:
             # API returned an error, move to errors directory
             timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
             new_filename = f"{file.split('.')[0]}_{timestamp}.csv"
-            shutil.move(file_path, os.path.join(errors_dir, new_filename))
+            #shutil.move(file_path, os.path.join(errors_dir, new_filename))
             logging.error(f'Error processing file {file}: {response.json()}')
             error_count += 1
     except Exception as e:
