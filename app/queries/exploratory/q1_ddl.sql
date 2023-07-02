@@ -1,6 +1,6 @@
 -- Create database and user
 CREATE DATABASE globant;
-CREATE USER globant WITH PASSWORD 'xspDFr8b09t0';
+CREATE USER globant WITH PASSWORD 'passwd';
 GRANT ALL PRIVILEGES ON DATABASE globant TO globant;
 
 GRANT ALL PRIVILEGES ON DATABASE globant TO globant;

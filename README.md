@@ -149,6 +149,8 @@ To configure a connection with a Github repo using SSH follow the steps in this 
 ### Deploy Postgresql in an AWS EC2 Linux (Optional)
 Recommended tutorial: https://devopscube.com/install-configure-postgresql-amazon-linux/
 
+In **app/queries/exploratory** you could find ddl configurations
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
