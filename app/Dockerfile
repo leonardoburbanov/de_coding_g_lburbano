@@ -4,7 +4,6 @@ FROM python:3.9-slim
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV DATABASE_URI postgresql://globant:xspDFr8b09t0@44.203.177.42:5432/globant
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -20,6 +19,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the project files
 COPY . .
+
+# Run tests
+RUN pytest api_test.py
 
 # EXPOSE - informs Docker that the container listens on the specified network ports at runtime
 EXPOSE 5000
