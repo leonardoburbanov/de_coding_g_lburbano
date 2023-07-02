@@ -34,7 +34,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Globant/data_challenge_files/departments.csv"
+							"src": "/C:/Globant/de_coding_g_lburbano/app/test/input/departments.csv"
 						}
 					]
 				},
@@ -71,7 +71,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Globant/data_challenge_files/jobs.csv"
+							"src": "/C:/Globant/de_coding_g_lburbano/app/test/input/jobs.csv"
 						}
 					]
 				},
@@ -108,12 +108,12 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Globant/data_challenge_files/hired_employees.csv"
+							"src": "/C:/Globant/de_coding_g_lburbano/app/test/input/hired_employees.csv"
 						}
 					]
 				},
 				"url": {
-					"raw": "{{globant_backend}}/upload_csv?table=employees&batch_size=10",
+					"raw": "{{globant_backend}}/upload_csv?table=employees&batch_size=1200",
 					"host": [
 						"{{globant_backend}}"
 					],
@@ -127,7 +127,7 @@
 						},
 						{
 							"key": "batch_size",
-							"value": "10"
+							"value": "1200"
 						}
 					]
 				}
