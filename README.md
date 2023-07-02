@@ -35,8 +35,9 @@ Challenge
         <li><a href="#prerequisites-etl">Prerequisites ETL</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#launch-etl">Launch ETL</a></li>
     <li><a href="#test">Test</a></li>
+    <li><a href="#next-steps">Next steps</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -153,7 +154,7 @@ In **app/queries/exploratory** you could find ddl configurations
 
 
 <!-- LAUNCH ETL-->
-## Usage
+## Launch ETL
 
 Once you located the files in the **etl/input** folder you could run the ETL:
    ```sh
